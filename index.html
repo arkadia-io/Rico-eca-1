@@ -1,0 +1,305 @@
+  <html lang="en">
+   <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title>
+     Rico & Eca
+    </title>
+        <link rel="icon" href="./img/favicon.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <script src="https://kit.fontawesome.com/b80d961313.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Handlee&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Sacramento&display=swap" rel="stylesheet">
+   </head>
+   <body class="object-cover">
+     <!-- gate -->
+    <section id="gate" class="relative h-screen w-full bg-putih text-white justify-center overflow-hidden">
+  <!-- Background -->
+  <img src="./img/bg.jpg" alt="Background"
+       class="absolute inset-0 w-full h-full object-cover"/>
+
+  <!-- Atas -->
+  <div class="relative z-10 pt-3 text-center justify-start">
+    <p class="font-grotesk text-ireng text-sm my-5 reveal fade-in opacity-0 transition-all duration-1000">Wedding Invitation</p>
+  </div>
+
+  <!-- Frame foto -->
+  <div class="relative flex gap-3 justify-center my-20 mx-4 reveal zoom-in opacity-0 scale-95 transition-all duration-1000">
+    <!-- Frame 1 -->
+    <div class="relative w-40 h-48 shadow-lg">
+      <img src="img/bro.jpg" class="absolute inset-0 object-cover w-full h-full rounded-sm" />
+      <img src="img/pola.png" class="absolute inset-0 w-full h-full" />
+    </div>
+
+    <!-- Frame 2 -->
+    <div class="relative w-40 h-48 rotate-6 shadow-lg">
+      <img src="img/sis.jpg" class="absolute inset-0 object-cover w-full h-full rounded-sm" />
+      <img src="img/pola.png" class="absolute inset-0 w-full h-full" />
+    </div>
+  </div>
+
+  <!-- Bawah -->
+  <div class="relative z-10 mb-[70px] flex flex-col items-center">
+    <h3 class="text-ireng text-center font-sacramento text-6xl mb-5 reveal zoom-in opacity-0 scale-95 transition-all duration-1000">Rico &amp; Eca</h3>
+    <p class="text-ireng text-base mb-2 font-grotesk reveal fade-in opacity-0 transition-all duration-1000">
+      Kepada Yth. Bapak/Ibu/Saudara/i
+    </p>
+    <h3 id="penerima" class="text-3xl font-handlee text-ireng my-4 reveal fade-in opacity-0 transition-all duration-1000"></h3>
+
+    <button id="enterBtn"
+      class="px-6 py-3 bg-ireng text-putih font-grotesk rounded-lg shadow-lg glow reveal slide-down opacity-0 -translate-y-10 transition-all duration-1000
+             hover:scale-110 hover:animate-bounce transition-all duration-300">
+      Buka Undangan
+    </button>
+  </div>
+</section>
+
+  <!-- hero -->
+ <section id="hero" class="relative w-full min-h-screen text-white flex items-center justify-center">
+
+  <!-- Background slideshow -->
+  <div class="absolute inset-0 z-0 pointer-events-none">
+    <div id="bgA" class="absolute inset-0 bg-cover bg-center opacity-100 transition-opacity duration-1000"></div>
+    <div id="bgB" class="absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000"></div>
+  </div>
+  
+  <!-- Partikel -->
+  <div id="particles" class="absolute inset-0 z-10 overflow-hidden"></div>
+
+  <!-- Overlay -->
+  <div class="absolute inset-0 z-20 bg-[#2f2f2f]/70"></div>
+  <div class="absolute inset-0 z-30 bg-gradient-to-b from-transparent via-[#2f2f2f]/30 to-[#2f2f2f]"></div>
+
+  <!-- FRAME + ISIANNYA -->
+  <div class="relative z-40 w-[380px] flex flex-col items-center text-center px-6 py-10">
+    
+    <!-- Ikon Ornamen -->
+    <img src="./img/frme.png" alt="ornamen" class="w-full h-auto mb-6">
+
+    <!-- The Wedding Of -->
+    <p class="text-sm tracking-wide mb-3 font-grotesk text-putih reveal zoom-in opacity-0 scale-95 transition-all duration-1000">
+      The Wedding Of
+    </p>
+
+    <!-- Nama Pasangan -->
+    <h3 class="text-6xl font-sacramento mb-3 text-putih leading-tight reveal zoom-in opacity-0 scale-95 transition-all duration-1000">
+      Rico &amp; Eca
+    </h3>
+
+    <!-- Tanggal -->
+    <p class="text-xs mb-6 font-grotesk text-putih reveal zoom-in opacity-0 scale-95 transition-all duration-1000">
+      Minggu, 14 Desember 2025
+    </p>
+
+    <!-- Countdown -->
+    <div id="countdown" class="flex gap-6 mb-8 text-sm font-semibold reveal zoom-in opacity-0 scale-95 transition-all duration-1000">
+      <div class="flex flex-col items-center">
+        <span id="days" class="text-xl text-putih font-handlee">00</span>
+        <span class="font-grotesk text-putih">Hari</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <span id="hours" class="text-xl text-putih font-handlee">00</span>
+        <span class="text-putih font-grotesk">Jam</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <span id="minutes" class="text-xl text-putih font-handlee">00</span>
+        <span class="text-putih font-grotesk">Menit</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <span id="seconds" class="text-xl text-putih font-handlee">00</span>
+        <span class="font-grotesk text-putih">Detik</span>
+      </div>
+    </div>
+
+    <!-- Button Save The Date -->
+    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Rico%20%26%20Eca%20Wedding&dates=20251214/20251215&details=Pernikahan%20Rico%20dan%20Eca&location=&sf=true&output=xml">
+
+      <button class="px-5 py-2 text-ireng rounded-lg bg-putih reveal slide-up opacity-0 translate-y-10 transition-all duration-1000">
+        Save The Date
+      </button>
+    </a>
+  </div>
+</section>
+
+<div id="mempelai"></div>
+<div id="qoutes"></div>
+<div id="acara"></div>
+<div id="story"></div>
+<div id="gallery"></div>
+<div id="rsvp"></div>
+
+<!-- rsvp -->
+<!-- ===== SECTION RSVP ===== -->
+<section id="rsvp" class="pt-8 bg-putih">
+  <div class="container mx-auto max-w-2xl">
+    <!-- Judul -->
+    <h3 class="text-center text-4xl font-handlee text-ireng">UCAPKAN</h3>
+    <h3 class="text-center text-ireng text-3xl font-sacramento -mt-2">Sesuatu</h3>
+
+    <!-- Rekap Count -->
+    <div class="grid grid-cols-3 gap-4 text-center mb-8 reveal slide-up opacity-0 translate-y-10 transition-all duration-1000 mt-3">
+      <div class="bg-white p-4 rounded-lg shadow">
+        <h3 class="text-3xl font-handlee text-ireng" id="countHadir">0</h3>
+        <p class="font-grotesk text-ireng text-sm">Hadir</p>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow">
+        <h3 class="text-3xl font-handlee text-ireng" id="countTidak">0</h3>
+        <p class="font-grotesk text-ireng text-sm">Tidak Hadir</p>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow">
+        <h3 class="text-3xl font-handlee text-ireng" id="countRagu">0</h3>
+        <p class="text-ireng font-grotesk text-sm">Masih Ragu</p>
+      </div>
+    </div>
+
+    <!-- Form RSVP -->
+    <div class="bg-white p-6 rounded-2xl shadow-lg mb-8 reveal slide-up opacity-0 translate-y-10 transition-all duration-1000">
+      <form id="rsvpForm" class="space-y-4">
+        <input type="text" id="nama" placeholder="Nama" required
+          class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2f2f2f] font-grotesk">
+
+        <select id="status" required
+          class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2f2f2f] font-grotesk">
+          <option value="" disabled selected>Konfirmasi Kehadiran</option>
+          <option value="Hadir">Hadir</option>
+          <option value="Tidak Hadir">Tidak Hadir</option>
+          <option value="Ragu">Ragu</option>
+        </select>
+
+        <textarea id="ucapan" placeholder="Tulis ucapan..." rows="3"
+          class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2f2f2f] font-grotesk"></textarea>
+
+        <button type="submit"
+          class="w-full bg-ireng text-white py-2 rounded-lg hover:bg-[#2f2f2f] font-grotesk transition">
+          Kirim
+        </button>
+      </form>
+    </div>
+
+    <!-- List Ucapan -->
+    <div class="bg-white p-6 rounded-2xl shadow-lg reveal slide-up opacity-0 translate-y-10 transition-all duration-1000">
+      <h3 class="text-3xl font-handlee mb-4 text-ireng text-center">Ucapan &amp; Doa</h3>
+      <div id="listUcapan" class="space-y-4">
+        <!-- Data ucapan dari Firebase muncul di sini -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="amplop"></div>
+<div id="closing"></div>
+<div id="footer"></div>
+
+<audio id="bg-music" autoplay loop>
+  <source src="./musik/bgm.mp3" type="audio/mpeg" />
+</audio>
+
+<button id="btn-music" class="scroll-btn reveal zoom-in opacity-0 scale-95 transition-all duration-1000">
+  <i id="icon-music" class="fa-solid fa-pause"></i>
+</button>
+  
+  <script src="./js/main.js"></script>
+  <!-- ===== SCRIPT FIREBASE ===== -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
+  import {
+    getFirestore,
+    collection,
+    addDoc,
+    query,
+    orderBy,
+    onSnapshot,
+    serverTimestamp
+  } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyCZGcJZhYeup8LvDqqlvkIPMUGERgNQQik",
+    authDomain: "paperroid.firebaseapp.com",
+    projectId: "paperroid",
+    storageBucket: "paperroid.appspot.com", // pastikan ini sudah benar
+    messagingSenderId: "574247494711",
+    appId: "1:574247494711:web:819a6d4d307f0b185ccbb2",
+    measurementId: "G-FE7XFJGHJX"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  const rsvpForm = document.getElementById("rsvpForm");
+  const listUcapan = document.getElementById("listUcapan");
+
+  // 🔥 COLLECTION: "rsvp"
+  const rsvpCollection = collection(db, "ricoeca");
+
+  // Submit form (pakai serverTimestamp supaya bisa di-order)
+  rsvpForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const nama = document.getElementById("nama").value.trim();
+    const status = document.getElementById("status").value;
+    const ucapan = document.getElementById("ucapan").value.trim();
+
+    try {
+      await addDoc(rsvpCollection, {
+        nama,
+        status,
+        ucapan,
+        createdAt: serverTimestamp()
+      });
+      rsvpForm.reset();
+    } catch (error) {
+      console.error("Error tambah RSVP:", error);
+    }
+  });
+
+  // Realtime listener + count update
+  const q = query(rsvpCollection, orderBy("createdAt", "desc"));
+  onSnapshot(q, (snapshot) => {
+    listUcapan.innerHTML = "";
+
+    // counters
+    let hadir = 0;
+    let tidak = 0;
+    let ragu = 0;
+
+    snapshot.forEach((doc) => {
+      const data = doc.data() || {};
+      const statusRaw = (data.status || "").toString().toLowerCase().trim();
+
+      // hitung berdasarkan value (toleran terhadap case/variasi)
+      if (statusRaw === "hadir") hadir++;
+      else if (statusRaw === "tidak hadir" || statusRaw === "tidak") tidak++;
+      else if (statusRaw === "ragu") ragu++;
+
+      // buat list item (escape simple untuk hindari XSS)
+      const namaText = escapeHtml(data.nama || "Tamu");
+      const statusText = escapeHtml(data.status || "");
+      const ucapanText = escapeHtml(data.ucapan || "");
+
+      const item = document.createElement("div");
+      item.className = "p-4 border rounded-lg";
+      item.innerHTML = `
+        <p class="font-bold text-ireng">${namaText} <span class="text-sm text-gray-500">(${statusText})</span></p>
+        <p class="text-gray-700">${ucapanText}</p>
+      `;
+      listUcapan.appendChild(item);
+    });
+
+    // update DOM counters
+    document.getElementById("countHadir").textContent = hadir;
+    document.getElementById("countTidak").textContent = tidak;
+    document.getElementById("countRagu").textContent = ragu;
+  });
+
+  // helper kecil
+  function escapeHtml(str) {
+    return String(str).replace(/[&<>"']/g, function (m) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[m];
+    });
+  }
+</script>
+   </body>
+   </html>
