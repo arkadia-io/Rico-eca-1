@@ -1,0 +1,147 @@
+.font-sacramento {
+  font-family: "Sacramento", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-handlee {
+  font-family: "Handlee", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.font-grotesk {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.text-ireng {
+  color: #2f2f2f;
+}
+
+.text-putih {
+  color: #fffff0;
+}
+
+.bg-putih {
+  background-color: #fffff0;
+}
+
+.bg-ireng {
+  background-color: #2f2f2f;
+}
+
+.border-ireng {
+  border-color: #2f2f2f;
+}
+
+      /* Animasi glow */
+      @keyframes pulse-glow {
+        0%, 100% {
+          box-shadow: 0 0 10px rgba(255,255,255,0.6),
+                      0 0 20px rgba(255,255,255,0.3);
+        }
+        50% {
+          box-shadow: 0 0 20px rgba(255,255,255,0.9),
+                      0 0 40px rgba(255,255,255,0.5);
+        }
+      }
+      .glow {
+        animation: pulse-glow 2s infinite;
+      }
+      
+      /* hanya untuk visual atau untuk mencegah weird overflow saat locked */
+.locked-scroll {
+  overscroll-behavior: none;
+}
+
+.gallery.masonry {
+  column-count: 2;   /* 2 kolom untuk mobile */
+  column-gap: 8px;
+  padding: 12px;
+}
+.gallery.masonry img {
+  width: 100%;
+  margin-bottom: 8px;
+  border-radius: 12px;
+  display: block;
+}
+
+#btn-music {
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  z-index: 9999;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #2f2f2f; /* hitam elegan */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fffff0; /* putih */
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* ini masih pakai shadow, aman */
+}
+
+#btn-music:hover {
+  transform: scale(1.1);
+  background: #444444; /* versi lebih terang */
+}
+
+#btn-music.playing {
+  animation: pulse-glow 2s infinite;
+}
+
+/* ===== BASE REVEAL ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(0) translateX(0) scale(1);
+  transition-property: opacity, transform;
+  transition-duration: 1.5s; /* default */
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1); /* smooth ease */
+}
+
+/* ===== DURASI VARIASI ===== */
+.reveal.fast {
+  transition-duration: 1s;
+}
+.reveal.slow {
+  transition-duration: 2s;
+}
+
+/* ===== SLIDE EFFECTS ===== */
+.reveal-up {
+  transform: translateY(30px);
+}
+.reveal-down {
+  transform: translateY(-30px);
+}
+.reveal-left {
+  transform: translateX(30px);
+}
+.reveal-right {
+  transform: translateX(-30px);
+}
+
+/* ===== FADE EFFECT ===== */
+.reveal-fade {
+  opacity: 0;
+}
+
+/* ===== ZOOM EFFECT ===== */
+.reveal-zoom {
+  transform: scale(0.9);
+  opacity: 0;
+}
+
+/* ===== AKTIFKAN SAAT MASUK VIEWPORT ===== */
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0) translateX(0) scale(1);
+}
